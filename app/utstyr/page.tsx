@@ -87,7 +87,7 @@ export default function Utstyr() {
                     <Card key={index} className="overflow-hidden">
                       <div className="aspect-video w-full overflow-hidden">
                         <Image
-                          src={item.bilde || "/placeholder.svg"}
+                          src={item.bilde || "/globe.svg"}
                           alt={item.modell}
                           width={400}
                           height={300}

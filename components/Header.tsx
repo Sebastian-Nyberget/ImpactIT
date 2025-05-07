@@ -37,7 +37,7 @@ export function Header() {
           </Link>
         </nav>
         <Button asChild>
-          <Link href="/kontakt">Kontakt</Link>
+          <Link href="/#kontakt">Kontakt</Link>
         </Button>
       </div>
     </header>

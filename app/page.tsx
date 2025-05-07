@@ -18,7 +18,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">
-        <section className="w-full md:h-screen py-12 md:py-24 lg:py-32 xl:py-48 bg-orange-100">
+        <section className="w-full md:h-[900px] py-12 md:py-24 lg:py-32 xl:py-48 bg-orange-100">
           <div className="container mx-auto max-w-7xl px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -39,7 +39,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Button variant="outline" size="lg">
-                    <Link href="/kontakt">Kontakt oss</Link>
+                    <Link href="/ansatte">Ansatte</Link>
                   </Button>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function Home() {
         </section>
 
         <section
-          id="contact"
+          id="kontakt"
           className="w-full py-12 md:py-24 lg:py-32 bg-white border-t"
         >
           <div className="container mx-auto max-w-7xl px-4 md:px-6">
