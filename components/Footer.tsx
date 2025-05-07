@@ -58,15 +58,15 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/equipment?category=Laptop"
+                  href="/utstyr?category=Laptop"
                   className="text-sm text-gray-500 hover:underline"
                 >
-                  PC
+                  Laptop
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/equipment?category=Skjerm"
+                  href="/utstyr?category=Skjerm"
                   className="text-sm text-gray-500 hover:underline"
                 >
                   Skjermer
@@ -74,7 +74,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/equipment?category=Nettbrett"
+                  href="/utstyr?category=Nettbrett"
                   className="text-sm text-gray-500 hover:underline"
                 >
                   Nettbrett
@@ -82,7 +82,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/equipment"
+                  href="/utstyr"
                   className="text-sm text-gray-500 hover:underline"
                 >
                   Se alt
@@ -91,7 +91,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="text-sm font-medium">Legal</h3>
+            <h3 className="text-sm font-medium">Juridisk</h3>
             <ul className="space-y-2">
               <li>
                 <Link

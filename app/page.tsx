@@ -44,7 +44,7 @@ export default function Home() {
                 </div>
               </div>
               <Image
-                src="/image.png"
+                src="/main.png"
                 width={550}
                 height={550}
                 alt="IT Equipment"
@@ -118,11 +118,11 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-2 gap-6 py-12 md:grid-cols-3 lg:grid-cols-6">
               <Link
-                href="/utstyr?category=PC"
+                href="/utstyr?category=Laptop"
                 className="flex flex-col items-center space-y-2 rounded-lg border bg-white p-4 shadow-sm hover:shadow-md transition-all"
               >
                 <Laptop className="h-8 w-8" />
-                <span className="text-sm font-medium">PC</span>
+                <span className="text-sm font-medium">Laptop</span>
               </Link>
               <Link
                 href="/utstyr?category=Skjerm"
@@ -164,7 +164,7 @@ export default function Home() {
                     <path d="m21 17-2 2"></path>
                   </svg>
                 </div>
-                <span className="text-sm font-medium">Prosjektor</span>
+                <span className="text-sm font-medium">Projektor</span>
               </Link>
               <Link
                 href="/utstyr?category=Kamera"
@@ -201,7 +201,7 @@ export default function Home() {
                     Kontakt Oss
                   </h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl">
-                    Har du spørsmål om våre utstyrsutleietjenester? Kom inn
+                    Har du spørsmål om våre utstyrsutleietjenester? Kom i
                     kontakt med teamet vårt.
                   </p>
                 </div>
