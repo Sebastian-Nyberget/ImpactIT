@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Laptop } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export function Header() {
   return (
@@ -36,9 +37,12 @@ export function Header() {
             Ansatte
           </Link>
         </nav>
-        <Button asChild>
-          <Link href="/#kontakt">Kontakt</Link>
-        </Button>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </header>
   );
