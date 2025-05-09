@@ -12,11 +12,13 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { checkRole } from "@/lib/server/utils";
 
-export default function Home() {
+export default async function Home() {
+  const isAdmin = await checkRole("admin");
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header isAdmin={isAdmin} />
       <main className="flex-1">
         <section className="w-full md:h-[900px] py-12 md:py-24 lg:py-32 xl:py-48 bg-orange-100">
           <div className="container mx-auto max-w-7xl px-4 md:px-6">

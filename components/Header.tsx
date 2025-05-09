@@ -1,9 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import { Laptop } from "lucide-react";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+interface HeaderProps {
+  isAdmin: boolean;
+}
 
-export function Header() {
+export function Header({ isAdmin }: HeaderProps) {
   return (
     <header className="border-b">
       <div className="container mx-auto max-w-7xl flex h-16 items-center justify-between px-4 md:px-6">
@@ -38,10 +50,29 @@ export function Header() {
           </Link>
         </nav>
         <SignedOut>
-          <SignInButton />
+          <div className="flex items-center justify-between gap-x-4">
+            <SignInButton>
+              <Button variant="outline">Logg inn</Button>
+            </SignInButton>
+            <SignUpButton>
+              <Button variant="default">Registrer deg</Button>
+            </SignUpButton>
+          </div>
         </SignedOut>
         <SignedIn>
-          <UserButton />
+          <div className="flex items-center justify-between gap-x-4">
+            {isAdmin && (
+              <Button variant="outline">
+                <Link
+                  href="/admin/dashboard"
+                  className="text-sm font-medium underline-offset-4"
+                >
+                  Dashboard
+                </Link>
+              </Button>
+            )}
+            <UserButton />
+          </div>
         </SignedIn>
       </div>
     </header>
