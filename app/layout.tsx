@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import Script from "next/script";
 import { IMPACTIT_CONFIG } from "@/lib/utils";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
   title: "ImpactIT - Profesjonell IT-utstyr",
@@ -17,19 +18,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {IMPACTIT_CONFIG.isProd && (
-          <Script
-            id="CookieConsent"
-            src="https://policy.app.cookieinformation.com/uc.js"
-            data-culture="NB"
-            data-gcm-version="2.0"
-            type="text/javascript"
-          />
-        )}
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          {IMPACTIT_CONFIG.isProd && (
+            <Script
+              id="CookieConsent"
+              src="https://policy.app.cookieinformation.com/uc.js"
+              data-culture="NB"
+              data-gcm-version="2.0"
+              type="text/javascript"
+            />
+          )}
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
