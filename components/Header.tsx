@@ -12,7 +12,7 @@ import {
 import { Button } from "./ui/button";
 
 interface HeaderProps {
-  isAdmin: boolean;
+  isAdmin?: boolean;
 }
 
 export function Header({ isAdmin }: HeaderProps) {
